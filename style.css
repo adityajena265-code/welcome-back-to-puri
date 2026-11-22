@@ -5,24 +5,22 @@
 }
 
 body {
+    width: 100%;
     min-height: 100vh;
-    background: #071d35;
-    font-family: 'Segoe UI', sans-serif;
-    overflow: hidden;
+    min-height: 100dvh;
+    background: #061b49;
+    overflow-x: hidden;
+    font-family: Georgia, serif;
 }
 
-/* Full screen background area */
 .stage {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     z-index: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
-/* Image and button stay together */
-.artwork {
 .artwork {
     position: relative;
     width: 100%;
@@ -31,17 +29,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
 }
+
 .background-image {
     display: block;
     width: 100%;
-    height:100%;
-    max-width:100%;
+    height: 100%;
+    max-width: 100%;
     max-height: 100%;
+    object-fit: contain;
     pointer-events: none;
 }
 
-/* Invisible clickable button */
 #welcomeBtn {
     position: absolute;
     z-index: 2;
@@ -53,97 +53,80 @@ body {
     background: transparent;
     border: none;
     cursor: pointer;
-    touch-action: manipulation;
 }
 
-/* Creator credit */
-.creator {
-    position: fixed;
-    right: 18px;
-    bottom: 12px;
-    z-index: 3;
-    color: #ffd783;
-    text-align: right;
-    font-size: 13px;
-    line-height: 1.6;
-    text-shadow: 1px 1px 4px #000;
-}
-
-/* Surprise message */
 #surpriseMessage {
     position: fixed;
-    z-index: 5;
+    z-index: 99999;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(90%, 520px);
+    width: 88%;
+    max-width: 500px;
     max-height: 85vh;
     overflow-y: auto;
-    padding: 30px 22px;
-    background: linear-gradient(135deg, #092c50, #174b65);
-    color: white;
+    padding: 25px 20px;
+    background: linear-gradient(145deg, #08265c, #061638);
+    color: #fff;
+    border: 2px solid #d9b45b;
+    border-radius: 18px;
     text-align: center;
-    line-height: 1.6;
-    border: 2px solid #f6cc76;
-    border-radius: 22px;
-    box-shadow: 0 0 35px #0009;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
 
 #surpriseMessage h2 {
-    color: #ffd783;
+    color: #f5d47a;
     margin-bottom: 18px;
+    font-size: 22px;
 }
 
 #surpriseMessage p {
     margin: 12px 0;
-    font-size: 17px;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
-/* Close button */
 #closeBtn {
-    margin-top: 18px;
-    padding: 12px 30px;
-    background: #f5c66e;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: 1px solid #f5d47a;
+    border-radius: 25px;
+    background: #d9ad4d;
+    color: #061638;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
-/* Mobile settings */
+.creator {
+    position: relative;
+    z-index: 1;
+    color: #f5d47a;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
 @media (max-width: 600px) {
-
-    .artwork {
-        max-width: 100vw;
-        max-height: 100dvh;
-    }
-
-    .background-image {
-        max-width: 100vw;
-        max-height: 100dvh;
-    }
-
     #welcomeBtn {
         left: 50%;
-        top: 62%;
+        top: 61%;
         bottom: auto;
         transform: translate(-50%, -50%);
         width: 65%;
         height: 12%;
     }
 
-    .creator {
-        right: 10px;
-        bottom: 8px;
-        font-size: 11px;
+    #surpriseMessage {
+        width: 90%;
+        padding: 20px 15px;
     }
 
-    #surpriseMessage {
-        padding: 22px 16px;
+    #surpriseMessage h2 {
+        font-size: 19px;
     }
 
     #surpriseMessage p {
