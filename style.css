@@ -17,17 +17,19 @@ body {
 .background-image {
     width: 100%;
     height: 100vh;
+    height: 100dvh;
     object-fit: contain;
     position: fixed;
     inset: 0;
     z-index: 0;
+    pointer-events: none;
 }
 
 #welcomeBtn {
     position: fixed;
     z-index: 2;
     left: 50%;
-    bottom: 5%;
+    bottom: 10%;
     transform: translateX(-50%);
     width: 45%;
     height: 10%;
@@ -35,6 +37,7 @@ body {
     border: none;
     color: transparent;
     cursor: pointer;
+    touch-action: manipulation;
 }
 
 .creator {
@@ -56,6 +59,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: min(90%, 520px);
+    max-height: 85vh;
+    overflow-y: auto;
     padding: 30px 22px;
     background: linear-gradient(135deg, #092c50, #174b65);
     color: white;
@@ -83,9 +88,31 @@ body {
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    font-weight: bold;
 }
 
 .hidden {
     display: none;
+}
+
+/* Mobile screen adjustment */
+@media (max-width: 600px) {
+    #welcomeBtn {
+        width: 65%;
+        height: 12%;
+        bottom: 8%;
+    }
+
+    .creator {
+        right: 10px;
+        bottom: 8px;
+        font-size: 11px;
+    }
+
+    #surpriseMessage {
+        padding: 22px 16px;
+    }
+
+    #surpriseMessage p {
+        font-size: 15px;
+    }
 }
