@@ -88,18 +88,23 @@ body {
     border: none;
     border-radius: 30px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .hidden {
     display: none;
 }
 
-/* Mobile screen adjustment */
+/* MOBILE SCREEN SETTINGS */
 @media (max-width: 600px) {
+
     #welcomeBtn {
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        transform: translate(-50%, -50%);
         width: 65%;
         height: 12%;
-        bottom: 13%;
     }
 
     .creator {
