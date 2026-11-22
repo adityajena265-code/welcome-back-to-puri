@@ -1,123 +1,62 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-    min-height: 100vh;
-    background: #071d35;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', sans-serif;
-    overflow: hidden;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back to Puri ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.background-image {
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;
-    object-fit: contain;
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-}
+<body>
 
-#welcomeBtn {
-    position: fixed;
-    z-index: 2;
-    left: 50%;
-    bottom: 10%;
-    transform: translateX(-50%);
-    width: 45%;
-    height: 10%;
-    background: transparent;
-    border: none;
-    color: transparent;
-    cursor: pointer;
-    touch-action: manipulation;
-}
+    <div class="stage">
 
-.creator {
-    position: fixed;
-    right: 18px;
-    bottom: 12px;
-    z-index: 3;
-    color: #ffd783;
-    text-align: right;
-    font-size: 13px;
-    line-height: 1.6;
-    text-shadow: 1px 1px 4px #000;
-}
+        <div class="artwork">
 
-#surpriseMessage {
-    position: fixed;
-    z-index: 5;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: min(90%, 520px);
-    max-height: 85vh;
-    overflow-y: auto;
-    padding: 30px 22px;
-    background: linear-gradient(135deg, #092c50, #174b65);
-    color: white;
-    text-align: center;
-    line-height: 1.6;
-    border: 2px solid #f6cc76;
-    border-radius: 22px;
-    box-shadow: 0 0 35px #0009;
-}
+            <img
+                class="background-image"
+                src="./puri-design.png.jpeg"
+                alt="Welcome Back to Puri"
+            >
 
-#surpriseMessage h2 {
-    color: #ffd783;
-    margin-bottom: 18px;
-}
+            <button
+                id="welcomeBtn"
+                aria-label="Click here to open your surprise">
+            </button>
 
-#surpriseMessage p {
-    margin: 12px 0;
-    font-size: 17px;
-}
+        </div>
 
-#closeBtn {
-    margin-top: 18px;
-    padding: 12px 30px;
-    background: #f5c66e;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-}
+    </div>
 
-.hidden {
-    display: none;
-}
+    <section id="surpriseMessage" class="hidden">
 
-/* MOBILE SCREEN SETTINGS */
-@media (max-width: 600px) {
+        <h2>❤️ A HEARTFELT WELCOME ❤️</h2>
 
-    #welcomeBtn {
-        left: 50%;
-        top: calc(57% + 1in +1cm );
-        bottom: auto;
-        transform: translate(-50%, -50%);
-        width: 65%;
-        height: 12%;
-    }
+        <p>Dear Priyanka Ma'am and Tara Sir,</p>
 
-    .creator {
-        right: 10px;
-        bottom: 8px;
-        font-size: 11px;
-    }
+        <p>
+            Your return has brought happiness and excitement.
+            We are so happy to welcome you both back to Puri!
+        </p>
 
-    #surpriseMessage {
-        padding: 22px 16px;
-    }
+        <p>
+            May your return bring beautiful memories,
+            happiness and countless smiles.
+        </p>
 
-    #surpriseMessage p {
-        font-size: 15px;
-    }
-}
+        <p>With lots of respect and warm wishes ❤️</p>
+
+        <button id="closeBtn">Close</button>
+
+    </section>
+
+    <div class="creator">
+        Created with respect & love ❤️<br>
+        — Aditya
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
